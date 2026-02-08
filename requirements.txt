@@ -1,0 +1,10 @@
+# 小红书自动发布器依赖
+playwright>=1.40.0
+pyyaml>=6.0
+pillow>=10.0.0
+asyncio
+tkinter (Python内置)
+pathlib
+argparse (Python内置)
+datetime (Python内置)
+logging (Python内置)

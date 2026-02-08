@@ -1,0 +1,45 @@
+platform:
+  name: xiaohongshu
+  creator_url: https://creator.xiaohongshu.com
+  login_url: https://creator.xiaohongshu.com/login
+  publish_url: https://creator.xiaohongshu.com/publish
+
+selectors:
+  # 登录页面
+  login_qr_tab: '.login-tab-item[data-type="qrcode"]'
+  qr_code_img: '.qrcode-img img'
+  login_success_indicator: '.user-name, .user-info'
+  login_button: '.login-btn'
+
+  # 发布页面
+  publish_btn: '.publish-btn, button[type="submit"]'
+  upload_area: '.upload-area, .upload-container'
+  image_input: 'input[type="file"]'
+  title_input: 'input[placeholder*="标题"], input[placeholder*="标题"]'
+  content_editor: '.editor-content textarea, .content-editor textarea'
+  tag_container: '.tag-container'
+  tag_input: '.tag-input input'
+
+  # 通用
+  dialog_close: '.dialog-close, .close-btn'
+
+timeouts:
+  login_wait: 120000      # 扫码等待2分钟
+  upload_wait: 30000      # 上传等待30秒
+  page_load: 15000        # 页面加载15秒
+  element_wait: 10000     # 元素等待10秒
+
+settings:
+  headless: false         # 强制非无头模式，用户可见
+  window_size: [1440, 900]
+  default_tags: ['励志', '正能量', '人生感悟', '自我成长', '治愈']
+  max_images: 9           # 小红书最多9张图
+
+content:
+  max_title_length: 20
+  max_content_length: 1000
+  min_content_length: 50
+
+logging:
+  level: INFO
+  show_screenshot: true   # 是否显示截图路径
